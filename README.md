@@ -1,6 +1,6 @@
-# Frontend Mentor - Age calculator component solution
+# Frontend Mentor - News Homepage solution
 
-This is a solution to the [Age calculator component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q).
+This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl).
 
 ## Table of contents
 
@@ -18,13 +18,14 @@ This is a solution to the [Age calculator component challenge on Frontend Mentor
 
 ### Screenshots
 
-![](./src/assets/desktop.png)
-![](./src/assets/mobile.png)
+![](./src/assets/images/desktop.PNG)
+![](./src/assets/images/mobile.PNG)
+![](./src/assets/images/mobile-menu.PNG)
 
 ### Links
 
-- Solution URL: [GitHub Repo](https://github.com/tdtatum2/Age-Calculator)
-- Live Site URL: [GitHub Pages](https://tdtatum2.github.io/Age-Calculator)
+- Solution URL: [GitHub Repo](https://github.com/tdtatum2/News-Homepage)
+- Live Site URL: [GitHub Pages](https://tdtatum2.github.io/News-Homepage)
 
 ## My process
 
@@ -35,21 +36,17 @@ This is a solution to the [Age calculator component challenge on Frontend Mentor
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [ReactBootstrap](https://react-bootstrap.github.io/) - Styling library built for React
 
 ### What I learned
 
-This challenged really exposed a few of my weaknesses as a JavaScript developer.
-
-- I did not fully understand the usage of setCustomValidity in regards to form validation and how to properly "reset" the CustomValidity field of an element. I got caught up because my form would always be invalid after a single invalid input, even if the following inputs were expected to be valid. I found that it happened because I was setting the CustomValidity inside of the submit function.
-
-- I struggled to figure out how to find the difference between two dates, but some research into JavaScript Date objects helped me figure that out.
-
-- I was initially going to animate the result numbers, as outlined in the bonus section of this challenge, but I ran into issues because the ```html span``` inside of my h1 element would need to be positioned absolutely in order to incorporate the animation I wanted, which caused a number of issues.
+I learned a lot about utilizing rows and columns to create responsive designs with ease. It was the easiest time I've ever had going from mobile to desktop designs because it was as simple as changing the amount of columns that an element takes up. It was also my first experience with ReactBootstrap's Offcanvas component, as well as dynamically rendering images using HTML5's Picture element with srcSet!
 
 ### Continued development
 
-- I want to learn more about animations and best practices for structuring html in a way that elements can easily be animated.
-- I want to continue learning about powerful JavaScript objects, libraries, and functions.
+- I want to learn what other useful HTML5 elements I am missing out on using.
+- I want to apply my learnings of this responsive grid layout to my future projects.
+- I want to learn more about complex element placement and alignment practices.
 
 ### Useful resources
 

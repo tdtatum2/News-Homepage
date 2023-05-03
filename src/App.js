@@ -1,6 +1,5 @@
 import companyLogo from './assets/images/logo.svg';
 import navLogo from './assets/images/icon-menu.svg';
-import navLogoClose from './assets/images/icon-menu-close.svg';
 import blocksImg from './assets/images/image-web-3-mobile.jpg';
 import blocksImg2 from './assets/images/image-web-3-desktop.jpg';
 import pcImg from './assets/images/image-retro-pcs.jpg';
@@ -18,7 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="app__container container">
-      <Navbar bg="light" expand="lg" className="mb-3">
+      <Navbar expand="lg" className="mb-3">
           <Container fluid>
             <Navbar.Brand href="#"><img src={companyLogo} alt="Company Logo (W)" /></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`}> <img src={navLogo} alt="Open Navigation Menu" /> </Navbar.Toggle>
@@ -33,12 +32,12 @@ function App() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3 mx-3">
-                  <Nav.Link href="#">Home</Nav.Link>
-                  <Nav.Link href="#">New</Nav.Link>
-                  <Nav.Link href="#">Popular</Nav.Link>
-                  <Nav.Link href="#">Trending</Nav.Link>
-                  <Nav.Link href="#">Categories</Nav.Link>
+                <Nav className="justify-content-end flex-grow-1">
+                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#new">New</Nav.Link>
+                  <Nav.Link href="#popular">Popular</Nav.Link>
+                  <Nav.Link href="#trending">Trending</Nav.Link>
+                  <Nav.Link href="#categories">Categories</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
@@ -60,7 +59,7 @@ function App() {
                   <Col xs={12} lg={6}>       
                     <h1 className="header_title">The Bright Future of Web 3.0?</h1>
                   </Col>
-                  <Col xs={12} lg={6}>
+                  <Col xs={12} lg={6} className='d-grid h-50'>
                     <p className="header_description">We dive into the next evolution of the web that claims to put the power of
                     the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
                     <button className="header_button">Read More</button>
@@ -91,41 +90,54 @@ function App() {
           </Row>
 
           <section className="featured_articles">
-            <Row className="featured_article">
-              <Col xs={4}>
-                <img src={pcImg} alt="Retro Computers" />
+            <Row>
+              <Col xs={12} lg={4} className="featured_article">
+                <Row>
+                  <Col xs={4}>
+                    <img src={pcImg} alt="Retro Computers" />
+                  </Col>
+                  <Col xs={8}>
+                    <h2 className="featured_number">01</h2>
+                    <h3 className="featured_title">Reviving Retro PCs</h3>
+                    <p className="featured_description">What happens when old PCs are given modern upgrades?</p>
+                  </Col>
+                </Row>
               </Col>
-              <Col xs={8}>
-                <h2 className="featured_number">01</h2>
-                <h3 className="featured_title">Reviving Retro PCs</h3>
-                <p className="featured_description">What happens when old PCs are given modern upgrades?</p>
+              <Col xs={12} lg={4} className="featured_article">
+                <Row>
+                  <Col xs={4}>
+                    <img src={keyboardImg} alt="Laptop Keyboard" />
+                  </Col>
+                  <Col xs={8}>
+                    <h2 className="featured_number">02</h2>
+                    <h3 className="featured_title">Top 10 Laptops of 2022</h3>
+                    <p className="featured_description">Our best picks for various needs and budgets.</p>
+                  </Col>
+                </Row>
               </Col>
-            </Row>
-            <Row className="featured_article">
-              <Col xs={4}>
-                <img src={keyboardImg} alt="Laptop Keyboard" />
-              </Col>
-              <Col xs={8}>
-                <h2 className="featured_number">02</h2>
-                <h3 className="featured_title">Top 10 Laptops of 2022</h3>
-                <p className="featured_description">Our best picks for various needs and budgets.</p>
-              </Col>
-            </Row>
-            <Row className="featured_article">
-              <Col xs={4}>
-                <img src={gamingImg} alt="Controller being tossed" />
-              </Col>
-              <Col xs={8}>
-                <h2 className="featured_number">03</h2>
-                <h3 className="featured_title">The Growth of Gaming</h3>
-                <p className="featured_description">How the pandemic has sparked fresh opportunities.</p>
+              <Col xs={12} lg={4} className="featured_article">
+                <Row>
+                  <Col xs={4}>
+                    <img src={gamingImg} alt="Controller being tossed" />
+                  </Col>
+                  <Col xs={8}>
+                    <h2 className="featured_number">03</h2>
+                    <h3 className="featured_title">The Growth of Gaming</h3>
+                    <p className="featured_description">How the pandemic has sparked fresh opportunities.</p>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </section>
         </main>
 
         <footer className="attribution">
-          Made by me
+          <div className="frontend-mentor">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
+          </div>
+          <div className="fin">
+            Coded by <a href="https://www.fintatum.com" target='_blank' rel="noreferrer">Fin</a>
+          </div>          
         </footer>
     </div>
   );
